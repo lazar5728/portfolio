@@ -11,6 +11,19 @@
     <meta property="og:type" content="website">
     <title>Bawa Akpelotou Lazar - Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#88B04B',
+                        'primary-dark': '#6B8E3A',
+                        'primary-light': '#A8C97F',
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -18,14 +31,17 @@
     <!-- Navigation -->
     <nav class="fixed w-full bg-white shadow-md z-50">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-blue-600">Lazar</a>
+            <a href="#" class="flex items-center space-x-3">
+                <img src="/IMG/Profil.jpg" alt="Lazar" class="w-10 h-10 rounded-full object-cover border-2 border-primary">
+                <span class="text-2xl font-bold text-primary">Lazar</span>
+            </a>
             <div class="hidden md:flex space-x-8">
-                <a href="#home" class="nav-link text-gray-700 hover:text-blue-600">Accueil</a>
-                <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">À propos</a>
-                <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600">Compétences</a>
-                <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600">Projets</a>
-                <a href="#experience" class="nav-link text-gray-700 hover:text-blue-600">Expérience</a>
-                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="#home" class="nav-link text-gray-700 hover:text-primary">Accueil</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-primary">À propos</a>
+                <a href="#skills" class="nav-link text-gray-700 hover:text-primary">Compétences</a>
+                <a href="#projects" class="nav-link text-gray-700 hover:text-primary">Projets</a>
+                <a href="#experience" class="nav-link text-gray-700 hover:text-primary">Expérience</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-primary">Contact</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden focus:outline-none">
                 <i class="fas fa-bars text-2xl text-gray-700"></i>
@@ -34,32 +50,31 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
             <div class="px-6 py-4 space-y-3">
-                <a href="#home" class="block text-gray-700 hover:text-blue-600">Accueil</a>
-                <a href="#about" class="block text-gray-700 hover:text-blue-600">À propos</a>
-                <a href="#skills" class="block text-gray-700 hover:text-blue-600">Compétences</a>
-                <a href="#projects" class="block text-gray-700 hover:text-blue-600">Projets</a>
-                <a href="#experience" class="block text-gray-700 hover:text-blue-600">Expérience</a>
-                <a href="#contact" class="block text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="#home" class="block text-gray-700 hover:text-primary">Accueil</a>
+                <a href="#about" class="block text-gray-700 hover:text-primary">À propos</a>
+                <a href="#skills" class="block text-gray-700 hover:text-primary">Compétences</a>
+                <a href="#projects" class="block text-gray-700 hover:text-primary">Projets</a>
+                <a href="#experience" class="block text-gray-700 hover:text-primary">Expérience</a>
+                <a href="#contact" class="block text-gray-700 hover:text-primary">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-50 to-gray-100 pt-20">
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-r from-green-50 to-gray-100 pt-20">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0 animate-on-scroll">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Bawa Akpelotou Lazar</h1>
-                <h2 class="text-2xl md:text-3xl text-blue-600 mb-6">Développeur Full Stack & Étudiant en Informatique</h2>
+                <h2 class="text-2xl md:text-3xl text-primary mb-6">Développeur Full Stack & Étudiant en Informatique</h2>
                 <p class="text-lg text-gray-600 mb-8">"Créer des solutions intelligentes et innovantes"</p>
                 <div class="flex space-x-4">
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Me contacter</a>
-                    <a href="/CVStage.pdf" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition duration-300">Télécharger CV</a>
+                    <a href="#contact" class="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-medium transition duration-300">Me contacter</a>
+                    <a href="/CVStage.pdf" class="border border-primary text-primary hover:bg-green-50 px-6 py-3 rounded-lg font-medium transition duration-300">Télécharger CV</a>
                 </div>
             </div>
             <div class="md:w-1/2 flex justify-center animate-on-scroll">
-                <img src="/IMG/Profil.jpg" alt="">
-                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-blue-100 flex items-center justify-center overflow-hidden shadow-xl">
-                    <i class="fas fa-user text-6xl text-blue-600"></i>
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center overflow-hidden shadow-2xl border-4 border-white">
+                    <img src="/IMG/profile.jpeg" alt="Bawa Akpelotou Lazar - Photo de profil" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -91,7 +106,7 @@
                 <!-- Skill 1 -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <i class="fab fa-python text-3xl text-blue-600 mr-3"></i>
+                        <i class="fab fa-python text-3xl text-primary mr-3"></i>
                         <h3 class="text-xl font-semibold">Python</h3>
                     </div>
                     <div class="skill-bar">
@@ -103,7 +118,7 @@
                 <!-- Skill 2 -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <i class="fab fa-js text-3xl text-blue-600 mr-3"></i>
+                        <i class="fab fa-js text-3xl text-primary mr-3"></i>
                         <h3 class="text-xl font-semibold">JavaScript</h3>
                     </div>
                     <div class="skill-bar">
@@ -115,7 +130,7 @@
                 <!-- Skill 3 -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <i class="fab fa-react text-3xl text-blue-600 mr-3"></i>
+                        <i class="fab fa-react text-3xl text-primary mr-3"></i>
                         <h3 class="text-xl font-semibold">React</h3>
                     </div>
                     <div class="skill-bar">
@@ -127,7 +142,7 @@
                 <!-- Skill 4 -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-database text-3xl text-blue-600 mr-3"></i>
+                        <i class="fas fa-database text-3xl text-primary mr-3"></i>
                         <h3 class="text-xl font-semibold">SQL</h3>
                     </div>
                     <div class="skill-bar">
@@ -139,7 +154,7 @@
                 <!-- Skill 5 -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <i class="fab fa-html5 text-3xl text-blue-600 mr-3"></i>
+                        <i class="fab fa-html5 text-3xl text-primary mr-3"></i>
                         <h3 class="text-xl font-semibold">HTML/CSS</h3>
                     </div>
                     <div class="skill-bar">
@@ -151,7 +166,7 @@
                 <!-- Skill 6 -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <i class="fab fa-git-alt text-3xl text-blue-600 mr-3"></i>
+                        <i class="fab fa-git-alt text-3xl text-primary mr-3"></i>
                         <h3 class="text-xl font-semibold">Git/GitHub</h3>
                     </div>
                     <div class="skill-bar">
@@ -163,7 +178,7 @@
                 <!-- Skill 7 -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <i class="fab fa-php text-3xl text-blue-600 mr-3"></i>
+                        <i class="fab fa-php text-3xl text-primary mr-3"></i>
                         <h3 class="text-xl font-semibold">PHP</h3>
                     </div>
                     <div class="skill-bar">
@@ -175,7 +190,7 @@
                 <!-- Skill 8 -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-code text-3xl text-blue-600 mr-3"></i>
+                        <i class="fas fa-code text-3xl text-primary mr-3"></i>
                         <h3 class="text-xl font-semibold">C/C++</h3>
                     </div>
                     <div class="skill-bar">
@@ -187,7 +202,7 @@
                 <!-- Skill 9 -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <i class="fab fa-bootstrap text-3xl text-blue-600 mr-3"></i>
+                        <i class="fab fa-bootstrap text-3xl text-primary mr-3"></i>
                         <h3 class="text-xl font-semibold">Bootstrap</h3>
                     </div>
                     <div class="skill-bar">
@@ -210,7 +225,7 @@
                 <!-- Skill 11 -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <div class="flex items-center mb-4">
-                        <i class="fab fa-microsoft text-3xl text-blue-600 mr-3"></i>
+                        <i class="fab fa-microsoft text-3xl text-primary mr-3"></i>
                         <h3 class="text-xl font-semibold">Office</h3>
                     </div>
                     <div class="skill-bar">
@@ -229,73 +244,73 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-on-scroll">
                 <!-- Project 1 -->
                 <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <i class="fas fa-car text-6xl text-blue-600"></i>
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-car text-6xl text-primary"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Gestion de vente et location de véhicules</h3>
                         <p class="text-gray-600 mb-4">Plateforme complète pour la gestion des transactions de véhicules avec suivi des stocks et des clients.</p>
-                        <a href="/pages/projet.html" class="text-blue-600 hover:underline font-medium">Voir le projet →</a>
+                        <a href="/pages/projet.html" class="text-primary hover:underline font-medium">Voir le projet →</a>
                     </div>
                 </div>
                 
                 <!-- Project 2 -->
                 <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <i class="fas fa-map text-6xl text-blue-600"></i>
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-map text-6xl text-primary"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">GéoNiger</h3>
                         <p class="text-gray-600 mb-4">Géoportail web du Niger offrant des informations géospatiales et des outils d'analyse.</p>
-                        <a href="/pages/projet.html" class="text-blue-600 hover:underline font-medium">Voir le projet →</a>
+                        <a href="/pages/projet.html" class="text-primary hover:underline font-medium">Voir le projet →</a>
                     </div>
                 </div>
                 
                 <!-- Project 3 -->
                 <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <i class="fas fas fa-university text-6xl text-blue-600"></i>
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fas fa-university text-6xl text-primary"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">CEDMI</h3>
                         <p class="text-gray-600 mb-4">Plateforme du club de mathématique et d’informatique : ressources, ateliers, projets et défis pour apprendre, pratiquer et innover ensemble.</p>
-                        <a href="/pages/projet.html" class="text-blue-600 hover:underline font-medium">Voir le projet →</a>
+                        <a href="/pages/projet.html" class="text-primary hover:underline font-medium">Voir le projet →</a>
                     </div>
                 </div>
 
                 <!-- Project 4 -->
                 <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <i class="fas fa-notes-medical text-6xl text-blue-600"></i>
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-notes-medical text-6xl text-primary"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Gestion de Fiche Médicale</h3>
                         <p class="text-gray-600 mb-4"> Simplifier l’accès et la gestion des informations médicales pour les professionnels de santé et améliorer le suivi des patients.</p>
-                        <a href="/pages/projet.html" class="text-blue-600 hover:underline font-medium">Voir le projet →</a>
+                        <a href="/pages/projet.html" class="text-primary hover:underline font-medium">Voir le projet →</a>
                     </div>
                 </div>
                 <!-- Project 5 -->
                 <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <i class="fas fa-lemon text-6xl text-blue-600"></i>
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-lemon text-6xl text-primary"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Gestion de Recolte de citron</h3>
                         <p class="text-gray-600 mb-4">Plateforme complète pour la gestion des récoltes de citrons avec suivi des stocks et des clients. </p>
-                        <a href="/pages/projet.html" class="text-blue-600 hover:underline font-medium">Voir le projet →</a>
+                        <a href="/pages/projet.html" class="text-primary hover:underline font-medium">Voir le projet →</a>
                     </div>
                 </div>
 
                 
                 <!-- Project 5 -->
                 <div class="project-card bg-gray-50 rounded-lg overflow-hidden shadow-md transition duration-300">
-                    <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <i class="fas fa-graduation-cap text-6xl text-blue-600"></i>
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-6xl text-primary"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Plateforme de gestion scolaire( en cours de developpement)</h3>
                         <p class="text-gray-600 mb-4">Système intégré pour la gestion des étudiants, des cours et des évaluations dans les établissements scolaires.</p>
-                        <a href="/pages/projet.html" class="text-blue-600 hover:underline font-medium">Voir le projet →</a>
+                        <a href="/pages/projet.html" class="text-primary hover:underline font-medium">Voir le projet →</a>
                     </div>
                 </div>
             </div>
@@ -308,8 +323,23 @@
             <h2 class="text-3xl font-bold text-center mb-16">Expérience & Activités</h2>
             <div class="max-w-3xl mx-auto animate-on-scroll">
                 <div class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4">Responsable Logistique - Tech CAMPUS CLUB</h3>
+                    <p class="text-primary mb-1">Université Abdou Moumouni</p>
+                    <p class="text-gray-500 text-sm mb-3">Octobre 2025 - Octobre 2026</p>
+                    <div class="pl-4 border-l-2 border-primary">
+                        <p class="text-gray-600 mb-3">Membre actif et responsable de la logistique au sein du Tech CAMPUS CLUB, contribuant à l'organisation d'événements technologiques et à la promotion de l'innovation au sein de l'université.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li>• Coordination logistique des événements et ateliers techniques</li>
+                            <li>• Gestion des ressources matérielles et techniques du club</li>
+                            <li>• Organisation de sessions de formation et de partage de connaissances</li>
+                            <li>• Collaboration avec les membres pour développer des projets innovants</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mb-10">
                     <h3 class="text-xl font-semibold mb-2">Participation à des hackathons</h3>
-                    <div class="pl-4 border-l-2 border-blue-600">
+                    <div class="pl-4 border-l-2 border-primary">
                         <div class="mb-4">
                             <h4 class="font-medium">MIABE Hackathon 2025</h4>
                             <p class="text-gray-600">Développement d'une solution innovante pour l'agriculture intelligente.</p>
@@ -323,7 +353,7 @@
                 
                 <div>
                     <h3 class="text-xl font-semibold mb-2">Création d'un club de programmation</h3>
-                    <div class="pl-4 border-l-2 border-blue-600">
+                    <div class="pl-4 border-l-2 border-primary">
                         <p class="text-gray-600">Fondation et animation d'un club de programmation à l'université pour partager des connaissances et organiser des ateliers pratiques.</p>
                     </div>
                 </div>
@@ -368,7 +398,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-blue-600 text-white">
+    <section id="contact" class="py-20 bg-primary text-white">
         <div class="container mx-auto px-6">
             <h2 class="text-3xl font-bold text-center mb-16">Contactez-moi</h2>
             <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 animate-on-scroll">
@@ -386,7 +416,8 @@
                             <i class="fas fa-phone text-xl mr-4 mt-1"></i>
                             <div>
                                 <p class="font-medium">Téléphone</p>
-                                <a href="tel:+22793509974" class="hover:underline">+227 93 50 99 74</a>
+                                <a href="tel:+22780301542" class="hover:underline block">+227 80 30 15 42</a>
+                                <a href="tel:+22793509974" class="hover:underline block">+227 93 50 99 74</a>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -411,17 +442,17 @@
                     <form id="contact-form" class="space-y-4">
                         <div>
                             <label for="name" class="block mb-1">Nom complet</label>
-                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300" placeholder="Votre nom">
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded-lg bg-green-600 text-white placeholder-green-200 focus:outline-none focus:ring-2 focus:ring-green-300" placeholder="Votre nom">
                         </div>
                         <div>
                             <label for="email" class="block mb-1">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300" placeholder="votre@email.com">
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded-lg bg-green-600 text-white placeholder-green-200 focus:outline-none focus:ring-2 focus:ring-green-300" placeholder="votre@email.com">
                         </div>
                         <div>
                             <label for="message" class="block mb-1">Message</label>
-                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded-lg bg-blue-500 text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300" placeholder="Votre message..."></textarea>
+                            <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded-lg bg-green-600 text-white placeholder-green-200 focus:outline-none focus:ring-2 focus:ring-green-300" placeholder="Votre message..."></textarea>
                         </div>
-                        <button type="submit" class="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition duration-300 w-full md:w-auto">Envoyer</button>
+                        <button type="submit" class="bg-white text-primary hover:bg-gray-100 px-6 py-3 rounded-lg font-medium transition duration-300 w-full md:w-auto">Envoyer</button>
                         <div id="form-message" class="hidden mt-2 p-3 rounded-lg"></div>
                     </form>
                 </div>
@@ -437,10 +468,10 @@
                     <p>&copy; 2025 Bawa Akpelotou Lazar. Tous droits réservés.</p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="https://www.instagram.com/zarlaking5728?igsh=NWx3OTU0czJyZWMy" class="hover:text-blue-400 transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
-                    <a href="https://linkedin.com/in/bawa-akpelotou-lazar-a6a064256/" class="hover:text-blue-400 transition duration-300"><i class="fab fa-linkedin text-xl"></i></a>
-                    <a href="https://github.com/lazar5728" class="hover:text-blue-400 transition duration-300"><i class="fab fa-github text-xl"></i></a>
-                    <a href="#" class="hover:text-blue-400 transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                    <a href="https://www.instagram.com/zarlaking5728?igsh=NWx3OTU0czJyZWMy" class="hover:text-green-400 transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://linkedin.com/in/bawa-akpelotou-lazar-a6a064256/" class="hover:text-green-400 transition duration-300"><i class="fab fa-linkedin text-xl"></i></a>
+                    <a href="https://github.com/lazar5728" class="hover:text-green-400 transition duration-300"><i class="fab fa-github text-xl"></i></a>
+                    <a href="#" class="hover:text-green-400 transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
                 </div>
             </div>
         </div>

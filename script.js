@@ -53,9 +53,9 @@
                 const navLink = document.querySelector(`a[href="#${sectionId}"]`);
 
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navLink?.classList.add('text-blue-600');
+                    navLink?.classList.add('text-primary');
                 } else {
-                    navLink?.classList.remove('text-blue-600');
+                    navLink?.classList.remove('text-primary');
                 }
             });
         });
