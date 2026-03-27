@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Réalisations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-card {
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .project-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .project-image {
+            transition: transform 0.5s ease;
+        }
+        .project-card:hover .project-image {
+            transform: scale(1.1);
+        }
+        .project-overlay {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm py-6 sticky top-0 z-10">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800">Mes Réalisations</h1>
+            <a href="/portfolio/index.html" class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 rounded-full transition duration-300 flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Retour au portfolio
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Project 1 -->
+            <div class="project-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/IMG/indexGéo.png" alt="Projet 1" class="w-full h-full object-cover project-image">
+                    <div class="absolute inset-0 project-overlay flex items-end p-4">
+                        <h3 class="text-white text-xl font-semibold">GéoNiger</h3>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <p class="text-gray-600">Géoportail web du Niger offrant des informations géospatiales et des outils d'analyse.</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/IMG/medic1.png" alt="Projet 2" class="w-full h-full object-cover project-image">
+                    <div class="absolute inset-0 project-overlay flex items-end p-4">
+                        <h3 class="text-white text-xl font-semibold">Gestion de Fiche Médicale</h3>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <p class="text-gray-600"> Simplifier l’accès et la gestion des informations médicales pour les professionnels de santé et améliorer le suivi des patients.</p>
+                    <a href="/pages/Medical.html" class="text-blue-600 hover:underline font-medium">Voir le projet →</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/IMG/Voiture.png" alt="Projet 3" class="w-full h-full object-cover project-image">
+                    <div class="absolute inset-0 project-overlay flex items-end p-4">
+                        <h3 class="text-white text-xl font-semibold">Gestion de vente et location de véhicules</h3>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <p class="text-gray-600">Plateforme complète pour la gestion des transactions de véhicules avec suivi des stocks et des clients.</p>
+                    <a href="/pages/Voiture.html" class="text-blue-600 hover:underline font-medium">Voir le projet →</a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/IMG/IndexCitron.png" alt="Projet 4" class="w-full h-full object-cover project-image">
+                    <div class="absolute inset-0 project-overlay flex items-end p-4">
+                        <h3 class="text-white text-xl font-semibold">Gestion de Recolte de citron</h3>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <p class="text-gray-600">Plateforme complète pour la gestion des récoltes de citrons avec suivi des stocks et des clients.</p>
+                    <a href="/pages/Citron.html" class="text-blue-600 hover:underline font-medium">Voir le projet →</a>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="project-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="/IMG/siteCedmi.png" alt="Projet 5" class="w-full h-full object-cover project-image">
+                    <div class="absolute inset-0 project-overlay flex items-end p-4">
+                        <h3 class="text-white text-xl font-semibold">CEDMI</h3>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <p class="text-gray-600">Plateforme du club de mathématique et d’informatique : ressources, ateliers, projets et défis pour apprendre, pratiquer et innover ensemble.</p>
+                    <a href="" class="text-blue-600 hover:underline font-medium">Voir le projet →</a>
+                </div>
+            </div>
+            <!-- Project 6 -->
+            <div class="project-card bg-white rounded-xl shadow-md overflow-hidden relative">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="../IMG/extraction.png" alt="Projet 5" class="w-full h-full object-cover project-image">
+                    <div class="absolute inset-0 project-overlay flex items-end p-4">
+                        <h3 class="text-white text-xl font-semibold">ANIP</h3>
+                    </div>
+                </div>
+                <div class="p-4">
+                    <p class="text-gray-600">Plateforme de reconnaissance faciale,analyse de similarité,prédiction d'âge et extraction de texte à partire d'un document ou une carte d'identité.</p>
+                    <a href="" class="text-blue-600 hover:underline font-medium">Voir le projet →</a>
+                </div>
+            </div>
+
+           
+
+          
+
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 Mon Portfolio. Tous droits réservés.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="hover:text-gray-300 transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/bawa-akpelotou-lazar-a6a064256?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2RXwmnxkRCuN2qhq%2BoGcgg%3D%3D" class="hover:text-gray-300 transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-gray-300 transition"><i class="fab fa-behance"></i></a>
+                <a href="#" class="hover:text-gray-300 transition"><i class="fab fa-dribbble"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Vous pouvez ajouter du JavaScript ici pour une galerie plus interactive
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.project-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '10';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '1';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

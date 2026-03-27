@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Projets</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+      grid-template-rows: repeat(4, 1fr);    /* 4 lignes */
+      height: 100vh;
+      width: 100vw;
+    }
+    .grid div {
+      position: relative;
+      overflow: hidden;
+    }
+    .grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Remplit la div sans déformation */
+      transition: transform 0.5s ease;
+    }
+    .grid img:hover {
+      transform: scale(1.1); /* Effet zoom au survol */
+    }
+  </style>
+  
+</head>
+<body>
+  <header class="bg-white shadow-sm py-6 sticky top-0 z-10">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-3xl font-bold text-gray-800">Mes Réalisations</h1>
+            <a href="../index.html" class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-2 rounded-full transition duration-300 flex items-center">
+                <i class="fas fa-arrow-left mr-2"></i> Retour au portfolio
+            </a>
+        </div>
+    </header>
+  <div class="grid">
+    <div><img src="../IMG/LogCitron.png" alt="Projet 1"></div>
+    <div><img src="../IMG/arbreCitron.png" alt="Projet 2"></div>
+    <div><img src="../IMG/IndexCitron.png" alt="Projet 3"></div>
+    <div><img src="../IMG/Arbrerecolte.png" alt="Projet 4"></div>
+    <div><img src="../IMG/arbreAjout.png" alt="Projet 5"></div>
+    <div><img src="../IMG/arbresac.png" alt="Projet 6"></div>
+    <div><img src="../IMG/arbrevente.png" alt="Projet 7"></div>
+    <div><img src="../IMG/IndexCitron.png" alt="Projet 8"></div>
+  </div>
+</body>
+</html>
